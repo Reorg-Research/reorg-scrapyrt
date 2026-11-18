@@ -9,6 +9,7 @@
 #
 
 FROM python:3.10-slim-buster
+RUN apt-get update && apt-get install -y --no-install-recommends --only-upgrade libexpat1 libgnutls30 libncursesw6 libtinfo6 ncurses-base ncurses-bin && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /scrapyrt/src /scrapyrt/project
 RUN mkdir -p /var/log/scrapyrt
