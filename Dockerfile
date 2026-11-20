@@ -8,7 +8,7 @@
 # > docker run -p 9080:9080 -tid -v ${PROJECT_DIR}:/scrapyrt/project scrapyrt
 #
 
-FROM python:3.10-slim-buster
+FROM public.ecr.aws/p0f9g1a0/octus/python:3.10-slim-v0.22.0
 
 RUN mkdir -p /scrapyrt/src /scrapyrt/project
 RUN mkdir -p /var/log/scrapyrt
